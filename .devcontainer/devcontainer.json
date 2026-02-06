@@ -3,7 +3,7 @@
 {
 	"name": "Node.js",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-	"image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+	"image": "mcr.microsoft.com/devcontainers/javascript-node:20-bookworm",
 	// Features to add to the dev container. More info: https://containers.dev/features.
 	// "features": {},
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
@@ -12,19 +12,26 @@
 	// "postCreateCommand": "yarn install",
 	// Configure tool-specific properties.
 	"customizations": {
-		"vscode": {
-			"extensions": [
-				"esbenp.prettier-vscode",
-				"vscode-icons-team.vscode-icons",
-				"wayou.vscode-todo-highlight"
-			],
-			"settings": {
-				"editor.fontSize": 32,
-				"terminal.integrated.fontSize": 24,
-				"editor.wordWrap": "on"
-			}
-		}
-	}
+    "vscode": {
+        "extensions": [
+            "esbenp.prettier-vscode",
+            "vscode-icons-team.vscode-icons",
+            "wayou.vscode-todo-highlight",
+            "ms-vscode.cpptools",
+            "formulahendry.auto-rename-tag"
+        ],
+        "settings": {
+            "editor.fontSize": 18,
+            "terminal.integrated.fontSize": 14,
+            "editor.wordWrap": "on",
+            "editor.formatOnSave": true,
+            "editor.defaultFormatter": "esbenp.prettier-vscode",
+            "editor.bracketPairColorization.enabled": true
+            // REMOVED: workbench.colorTheme
+            // REMOVED: editor.fontFamily (reverted to default)
+        }
+    }
+}
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
 }
